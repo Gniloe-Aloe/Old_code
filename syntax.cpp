@@ -200,12 +200,12 @@ template<>
 void gss<true>() {
 	std::cout << true << std::endl;
 }
-//��� ����� ������ �� �������� ������������
+
 template<>
 void gss<false>() {
 	std::cout << false << std::endl;
 }
-//�������� �� ����������. ��, �������� - ������ �������
+
 constexpr int cnst(int n) noexcept {
 	return n < 2 ? 1 : cnst(n-1)+cnst(n-2);
 }

@@ -1,4 +1,4 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include<ctime>
 #include<string>
 #include<vector>
@@ -31,7 +31,7 @@ public:
 	void Print_Coordinates() {
 		cout << m_X << '\t' << m_Y << endl;
 	}
-	//êîïèðîâàíå ýëåìåíòîâ èç äðóãîãî îáúåêòà ýòîãî êëàññà
+	//ÐºÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ð½Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¸Ð· Ð´Ñ€ÑƒÐ³Ð¾Ð³Ð¾ Ð¾Ð±ÑŠÐµÐºÑ‚Ð° ÑÑ‚Ð¾Ð³Ð¾ ÐºÐ»Ð°ÑÑÐ°
 	void CopyFrom(Coordinates b) {
 		m_X = b.m_X;
 		m_Y = b.m_Y;
@@ -74,7 +74,7 @@ int find(int A[], int N, int x)
 	}
 }
 
-//ñîðòèðîâêà âûáîðîì
+//ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð²Ñ‹Ð±Ð¾Ñ€Ð¾Ð¼
 void choise_sort(int A[], int N) {
 	for (int min = 0; min < N - 1; ++min) {
 		for (int maybe_min = min + 1; maybe_min < N; ++maybe_min) {
@@ -87,7 +87,7 @@ void choise_sort(int A[], int N) {
 	}
 }
 
-//ñîðòèðîâêà ïóçûðüêîì
+//ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¿ÑƒÐ·Ñ‹Ñ€ÑŒÐºÐ¾Ð¼
 void buble_sort(int A[], int N) {
 	for (int i = 0; i < N - 1; ++i) {
 		for(int j = 0; j < N - 1 - i; ++j)
@@ -100,8 +100,8 @@ void buble_sort(int A[], int N) {
 	}
 }
 
-//ñîðòèðîâêà âñòàâêàìè
-//âñòàâëÿåì ýëåìåíòû â îòñîðòèðîâàííóþ ÷àñòü ìàññèâà ïî îäíîìó
+//ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð²ÑÑ‚Ð°Ð²ÐºÐ°Ð¼Ð¸
+//Ð²ÑÑ‚Ð°Ð²Ð»ÑÐµÐ¼ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð² Ð¾Ñ‚ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½ÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð¿Ð¾ Ð¾Ð´Ð½Ð¾Ð¼Ñƒ
 void insert_sort(int A[], int N) {
 
 	for (int pos = 1; pos < N; ++pos) {
@@ -115,17 +115,17 @@ void insert_sort(int A[], int N) {
 	}
 }
 
-//çàïîëíèòü ïî óáûâàíèþ
+//Ð·Ð°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ð¿Ð¾ ÑƒÐ±Ñ‹Ð²Ð°Ð½Ð¸ÑŽ
 void array_fill_back(int A[], int N) {
 	for (int i = 0; i < N; ++i) {
 		*(A + i) = N - 1 - i;
 	}
 }
 
-//ñîðòèðîâêà ñ äèàïîçîíîì
+//ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ñ Ð´Ð¸Ð°Ð¿Ð¾Ð·Ð¾Ð½Ð¾Ð¼
 void count_sort(int A[], int N) {
 	int F[10] = {0};
-	//ìàññèâ ÷àñòîò çàïîëíÿåì
+	//Ð¼Ð°ÑÑÐ¸Ð² Ñ‡Ð°ÑÑ‚Ð¾Ñ‚ Ð·Ð°Ð¿Ð¾Ð»Ð½ÑÐµÐ¼
 	for (int i = 0; i < N; ++i) {
 		F[A[i]]++;
 	}
@@ -153,14 +153,14 @@ void mass_gherts(int A[], int N) {
 	}
 	cout << endl;
 }
-//ðåêóðåíòíûé ôàêòîðèàë
+//Ñ€ÐµÐºÑƒÑ€ÐµÐ½Ñ‚Ð½Ñ‹Ð¹ Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð»
 int rec_factorial(unsigned x) {
 	if (x == 1 || x == 0) {
 		return 1;
 	}
 	return rec_factorial(x - 1) * x;
 }
-//ÍÎÄ Åâêëèä
+//ÐÐžÐ” Ð•Ð²ÐºÐ»Ð¸Ð´
 int Evklid(int value1, int value2) {
 	if (value1 < value2) {
 		int tmp = value1;
@@ -181,13 +181,13 @@ int Evklid(int value1, int value2) {
 		}
 	}
 }
-//Ñîçäàòü ñëó÷àéíûé ìàññèâ
+//Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²
 void Random_Array(int A[], int size) {
 	for (int i = 0; i < size; ++i) {
 		*(A + i) = rand()%100;
 	}
 }
-// ñâîé áèíàðíûé ïîèñê
+// ÑÐ²Ð¾Ð¹ Ð±Ð¸Ð½Ð°Ñ€Ð½Ñ‹Ð¹ Ð¿Ð¾Ð¸ÑÐº
 int bin_search(int A[], int size, int search) {
 	int left = -1;
 	int right = size;
@@ -205,15 +205,15 @@ int bin_search(int A[], int size, int search) {
 	}
 	return -1;
 }
-// íîä åâêëèä
+// Ð½Ð¾Ð´ ÐµÐ²ÐºÐ»Ð¸Ð´
 int gcd(int a, int b) {
 	return (b == 0) ? a : gcd(b, a % b);
 }
-//ðåêóðñèíûé ôàêòîðèàë
+//Ñ€ÐµÐºÑƒÑ€ÑÐ¸Ð½Ñ‹Ð¹ Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð»
 int rec_factorial(int a) {
 	return (a == 1) ? a : a * rec_factorial(a - 1);
 }
-// áûñòðîå âîçâåäåíèå â ñòåïåíü ðåêóðñèâíî
+// Ð±Ñ‹ÑÑ‚Ñ€Ð¾Ðµ Ð²Ð¾Ð·Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ð² ÑÑ‚ÐµÐ¿ÐµÐ½ÑŒ Ñ€ÐµÐºÑƒÑ€ÑÐ¸Ð²Ð½Ð¾
 int rec_exponentiation(int value, int exponentiation) {
 	if (exponentiation == 0) {
 		return 1;
@@ -225,33 +225,33 @@ int rec_exponentiation(int value, int exponentiation) {
 		return value * rec_exponentiation(value, exponentiation - 1);
 	}
 }
-//ðåøàòåëü õàíîéñêèõ áàøåí
-// i ñ êàêîãî ñòîëáöà ïåðåêëàäûâàåì äèñê
-// k íà êàêîé ñòîëáåö ïåðåêëàäûâàåì äèñê
-// n êàêîé äèñê ïåðåêëàäûâàåì
+//Ñ€ÐµÑˆÐ°Ñ‚ÐµÐ»ÑŒ Ñ…Ð°Ð½Ð¾Ð¹ÑÐºÐ¸Ñ… Ð±Ð°ÑˆÐµÐ½
+// i Ñ ÐºÐ°ÐºÐ¾Ð³Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð° Ð¿ÐµÑ€ÐµÐºÐ»Ð°Ð´Ñ‹Ð²Ð°ÐµÐ¼ Ð´Ð¸ÑÐº
+// k Ð½Ð° ÐºÐ°ÐºÐ¾Ð¹ ÑÑ‚Ð¾Ð»Ð±ÐµÑ† Ð¿ÐµÑ€ÐµÐºÐ»Ð°Ð´Ñ‹Ð²Ð°ÐµÐ¼ Ð´Ð¸ÑÐº
+// n ÐºÐ°ÐºÐ¾Ð¹ Ð´Ð¸ÑÐº Ð¿ÐµÑ€ÐµÐºÐ»Ð°Ð´Ñ‹Ð²Ð°ÐµÐ¼
 void hanoi(int i, int k, int n) {
 	if (n == 1) {
-		cout << "ïåðåêëàäûâàåì ñî ñòîëáöà " << i <<" íà ñòîîëáåö " << k <<" äèñê " << n << endl;
+		cout << "Ð¿ÐµÑ€ÐµÐºÐ»Ð°Ð´Ñ‹Ð²Ð°ÐµÐ¼ ÑÐ¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð° " << i <<" Ð½Ð° ÑÑ‚Ð¾Ð¾Ð»Ð±ÐµÑ† " << k <<" Ð´Ð¸ÑÐº " << n << endl;
 	}
 	else {
 		int tmp = 6 - i - k;
 		hanoi(i, tmp, n - 1);
-		cout << "ïåðåêëàäûâàåì ñî ñòîëáöà " << i << " íà ñòîîëáåö " << k << " äèñê " << n << endl;
+		cout << "Ð¿ÐµÑ€ÐµÐºÐ»Ð°Ð´Ñ‹Ð²Ð°ÐµÐ¼ ÑÐ¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð° " << i << " Ð½Ð° ÑÑ‚Ð¾Ð¾Ð»Ð±ÐµÑ† " << k << " Ð´Ð¸ÑÐº " << n << endl;
 		hanoi(tmp, k, n - 1);
 	}
 }
-//ðåêóðñèâíàÿ ãåíåðàöèÿ âñåõ ÷èñåë îïðåäåë¸ííîé äëèííû
+//Ñ€ÐµÐºÑƒÑ€ÑÐ¸Ð²Ð½Ð°Ñ Ð³ÐµÐ½ÐµÑ€Ð°Ñ†Ð¸Ñ Ð²ÑÐµÑ… Ñ‡Ð¸ÑÐµÐ» Ð¾Ð¿Ñ€ÐµÐ´ÐµÐ»Ñ‘Ð½Ð½Ð¾Ð¹ Ð´Ð»Ð¸Ð½Ð½Ñ‹
 void binary_numbers_generate(int left_number_to_generate) {
 	static int combinations[17];
 	static int top = 0;
-	//êðàéíèé ñëó÷àé
+	//ÐºÑ€Ð°Ð¹Ð½Ð¸Ð¹ ÑÐ»ÑƒÑ‡Ð°Ð¹
 	if (left_number_to_generate == 0) {
 		for (int i = 0; i < top; ++i) {
 			cout << combinations[i];
 		}
 		cout << endl;
 	}
-	//ðåêóðñèâíûé ñëó÷àé
+	//Ñ€ÐµÐºÑƒÑ€ÑÐ¸Ð²Ð½Ñ‹Ð¹ ÑÐ»ÑƒÑ‡Ð°Ð¹
 	else {
 
 		combinations[top++] = 1;
@@ -263,7 +263,7 @@ void binary_numbers_generate(int left_number_to_generate) {
 		top--;
 	}
 }
-//ðåêóðñèâíàÿ ãåíåðàöèÿ ïåðåñòàíîâîê
+//Ñ€ÐµÐºÑƒÑ€ÑÐ¸Ð²Ð½Ð°Ñ Ð³ÐµÐ½ÐµÑ€Ð°Ñ†Ð¸Ñ Ð¿ÐµÑ€ÐµÑÑ‚Ð°Ð½Ð¾Ð²Ð¾Ðº
 void permutations(int lenth, int current, int buffer[], bool used[]) {
 	//base case
 	if (current == lenth) {
@@ -283,7 +283,7 @@ void permutations(int lenth, int current, int buffer[], bool used[]) {
 		}
 	}
 }
-//ñâîÿ ãåíåðàöèÿ öèñåë ëþáîé äëèííû â ëþáîì äèàïàçîíå
+//ÑÐ²Ð¾Ñ Ð³ÐµÐ½ÐµÑ€Ð°Ñ†Ð¸Ñ Ñ†Ð¸ÑÐµÐ» Ð»ÑŽÐ±Ð¾Ð¹ Ð´Ð»Ð¸Ð½Ð½Ñ‹ Ð² Ð»ÑŽÐ±Ð¾Ð¼ Ð´Ð¸Ð°Ð¿Ð°Ð·Ð¾Ð½Ðµ
 void my_tree(int lenth, int current, int buffer[], bool used[]) {
 	if (lenth == current) {
 		for (int i = 0; i < lenth; ++i) {
@@ -304,13 +304,13 @@ void my_tree(int lenth, int current, int buffer[], bool used[]) {
 
 }
 void input_array(int array[], int array_lenth) {
-	cout << "ââåäèòå " << array_lenth << " ýëåìåíòîâ ìàññèâà" << endl;
+	cout << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ " << array_lenth << " ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² Ð¼Ð°ÑÑÐ¸Ð²Ð°" << endl;
 	for (int i = 0; i < array_lenth; ++i) {
 		cin >> array[i];
 	}
 	cout << endl;
 }
-//ñîðòèðîâêà ñëèÿíèåì
+//ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° ÑÐ»Ð¸ÑÐ½Ð¸ÐµÐ¼
 void merge_sort(int array[], int array_lenth) {
 	if (array_lenth == 1) {
 		return;
@@ -353,13 +353,13 @@ void merge_sort(int array[], int array_lenth) {
 	}
 	delete[] buffer;
 }
-//ðåêóðåíòíîå ôèáîíà÷è
+//Ñ€ÐµÐºÑƒÑ€ÐµÐ½Ñ‚Ð½Ð¾Ðµ Ñ„Ð¸Ð±Ð¾Ð½Ð°Ñ‡Ð¸
 uint64_t fib_rec(int n) {
 	if (n == 1)return 1;
 	if (n == 0)return 0;
 	return fib_rec(n - 1) + fib_rec(n - 2);
 }
-// äèíàìè÷åñêîå ôèáîíà÷è
+// Ð´Ð¸Ð½Ð°Ð¼Ð¸Ñ‡ÐµÑÐºÐ¾Ðµ Ñ„Ð¸Ð±Ð¾Ð½Ð°Ñ‡Ð¸
 uint64_t fib_dinamic(int n) {
 	uint64_t* array = new uint64_t[n + 1];
 	array[0] = 0;
@@ -377,7 +377,7 @@ void print_vector(std::vector<int> array) {
 	}
 	cout << endl;
 }
-//ðåêóðåíòíûé áèíîì íüþòîíà èëè êîëè÷åñòâî òðàåêòîðèé, åñëè õîäèòü ìîæíî òîëüêî âíèç èëè âïðàâî
+//Ñ€ÐµÐºÑƒÑ€ÐµÐ½Ñ‚Ð½Ñ‹Ð¹ Ð±Ð¸Ð½Ð¾Ð¼ Ð½ÑŒÑŽÑ‚Ð¾Ð½Ð° Ð¸Ð»Ð¸ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ‚Ñ€Ð°ÐµÐºÑ‚Ð¾Ñ€Ð¸Ð¹, ÐµÑÐ»Ð¸ Ñ…Ð¾Ð´Ð¸Ñ‚ÑŒ Ð¼Ð¾Ð¶Ð½Ð¾ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð²Ð½Ð¸Ð· Ð¸Ð»Ð¸ Ð²Ð¿Ñ€Ð°Ð²Ð¾
 int binom_newton_rec(int i, int j) {
 	if (i == 0 or j == 0) {
 		return 1;
@@ -386,21 +386,21 @@ int binom_newton_rec(int i, int j) {
 		return binom_newton_rec(i - 1, j) + binom_newton_rec(i, j - 1);
 	}
 }
-//äèíàìè÷åñêèé áèíîì íüþòîíà
+//Ð´Ð¸Ð½Ð°Ð¼Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð±Ð¸Ð½Ð¾Ð¼ Ð½ÑŒÑŽÑ‚Ð¾Ð½Ð°
 int binom_newton_dynamic(int n, int m) {
-	//ñîçäàíèå äâóìåðíîãî äèíàìè÷åñêîãî ìàññèâà
+	//ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð´Ð²ÑƒÐ¼ÐµÑ€Ð½Ð¾Ð³Ð¾ Ð´Ð¸Ð½Ð°Ð¼Ð¸Ñ‡ÐµÑÐºÐ¾Ð³Ð¾ Ð¼Ð°ÑÑÐ¸Ð²Ð°
 	int** K = new int* [n + 1];
 	for (int i = 0; i <= n; ++i) {
 		K[i] = new int[m + 1];
 	}
-	//êðàéíèé ñëó÷àé
+	//ÐºÑ€Ð°Ð¹Ð½Ð¸Ð¹ ÑÐ»ÑƒÑ‡Ð°Ð¹
 	for (int i = 1; i <= n; ++i) {
 		K[i][1] = 1;
 	}
 	for (int j = 1; j <= m; ++j) {
 		K[1][j] = 1;
 	}
-	//"ðåêóðåíòíûé" ñëó÷àé
+	//"Ñ€ÐµÐºÑƒÑ€ÐµÐ½Ñ‚Ð½Ñ‹Ð¹" ÑÐ»ÑƒÑ‡Ð°Ð¹
 	for (int i = 2; i <= n; ++i) {
 		for (int j = 2; j <= m; ++j) {
 			K[i][j] = K[i - 1][j] + K[i][j - 1];
